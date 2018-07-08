@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A8F69592-E8A6-4E02-B60E-56A026FFF8B5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MyDiary.FileServer.Domain</RootNamespace>
+    <AssemblyName>MyDiary.FileServer.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\Core\Container.cs" />
+    <Compile Include="Models\Core\File.cs" />
+    <Compile Include="Models\Core\FileReference .cs" />
+    <Compile Include="Models\FactoryPattern\Repository.cs" />
+    <Compile Include="Models\FactoryPattern\IRepository.cs" />
+    <Compile Include="Models\FactoryPattern\IRepositoryFactory.cs" />
+    <Compile Include="Models\FactoryPattern\IRepositoryProvider.cs" />
+    <Compile Include="Models\FactoryPattern\RepositoryDoajImplementation.cs" />
+    <Compile Include="Models\FactoryPattern\RepositoryCrossrefImplementation.cs" />
+    <Compile Include="Models\FactoryPattern\RepositoryFTPImplementation.cs" />
+    <Compile Include="Models\Versions\FileVersion.cs" />
+    <Compile Include="Models\Versions\FileVersionReference.cs" />
+    <Compile Include="Models\ReadLinks\ReadLink.cs" />
+    <Compile Include="Models\Core\StoredObject.cs" />
+    <Compile Include="Models\Core\StoredObjectReference.cs" />
+    <Compile Include="Models\UploadSessions\UploadSession.cs" />
+    <Compile Include="Models\UploadSessions\UploadSessionReference .cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

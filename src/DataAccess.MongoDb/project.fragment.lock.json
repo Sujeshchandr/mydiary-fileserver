@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "exports": {
+    "Domain/1.0.0": {
+      "type": "project",
+      "framework": ".NETFramework,Version=v4.5.2",
+      "compile": {
+        "bin/Debug/MyDiary.FileServer.Domain.dll": {}
+      },
+      "runtime": {
+        "bin/Debug/MyDiary.FileServer.Domain.dll": {}
+      },
+      "contentFiles": {
+        "bin/Debug/MyDiary.FileServer.Domain.pdb": {
+          "buildAction": "None",
+          "codeLanguage": "any",
+          "copyToOutput": true
+        }
+      }
+    }
+  }
+}
